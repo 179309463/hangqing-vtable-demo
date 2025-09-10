@@ -16,7 +16,7 @@ class BondMarketPanel {
     // 加载模拟数据
     async loadMockupData() {
         try {
-            const response = await fetch('./mockup-data.txt');
+            const response = await fetch('./mockup-data.json');
             const text = await response.text();
             this.mockupData = JSON.parse(text);
             console.log(`加载了 ${this.mockupData.data.length} 条模拟数据`);
